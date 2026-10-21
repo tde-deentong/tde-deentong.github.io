@@ -94,7 +94,7 @@ There's no Contact tab. Contact details go on the About page and in every page's
 - [ ] Running races, Runcation trips and photos; a Pilates blurb
 - [ ] Check whether Deloitte allows the client work details to be public (the 185K-record risk pipeline)
 - [ ] Decide whether to keep the old `deentong` repo page or redirect it here
-- [ ] Push access from Claude sessions (GitHub access was granted, but the session that built this couldn't push)
+- [x] Push access from Claude sessions (working since 22 October 2026)
 
 ## Later ideas
 

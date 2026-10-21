@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resume | DeenTong</title>
+  <meta name="description" content="DeenTong's resume: experience, education, projects and courses.">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html"><img src="logo.svg" alt="" width="36" height="36"><span>DeenTong</span></a>
+    <nav class="tabs" aria-label="Main">
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html" aria-current="page">Resume</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="learning.html">Learning</a></li>
+        <li><a href="outside-work.html">Outside work</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="content">
+<div class="page">
+<h1>Resume</h1>
+<p class="intro resume-hint">Open a section to see more. Printing this page gives a clean copy.</p>
+<button class="toggle-all" type="button" aria-controls="resume" data-open="false">Expand all</button>
+
+<div class="resume" id="resume">
+<details open>
+  <summary>Summary</summary>
+  <div class="body">
+    <p><span class="todo">[Two or three lines: who you are, what you're good at, and the roles you're after.]</span></p>
+  </div>
+</details>
+
+<details open>
+  <summary>Experience</summary>
+  <div class="body">
+    <div class="entry">
+      <h3><span class="todo">[Job title, Organisation]</span></h3>
+      <p class="when"><span class="todo">[Month year to month year]</span></p>
+      <ul>
+        <li><span class="todo">[Achievement, with a number where you can]</span></li>
+        <li><span class="todo">[Achievement, with a number where you can]</span></li>
+      </ul>
+    </div>
+    <div class="entry">
+      <h3><span class="todo">[Job title, Organisation]</span></h3>
+      <p class="when"><span class="todo">[Month year to month year]</span></p>
+      <ul>
+        <li><span class="todo">[Achievement, with a number where you can]</span></li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<details>
+  <summary>Education</summary>
+  <div class="body">
+    <div class="entry">
+      <h3><span class="todo">[Degree, University]</span></h3>
+      <p class="when"><span class="todo">[Start year to end year]</span></p>
+      <ul>
+        <li>Relevant subjects include Natural Language Processing (COMP90042). <span class="todo">[Other subjects, thesis or awards]</span></li>
+      </ul>
+    </div>
+  </div>
+</details>
+
+<details>
+  <summary>Projects and hackathons</summary>
+  <div class="body">
+    <ul>
+      <li><a href="projects.html">Heidi25Hack</a>: voice-driven patient pre-screening assistant (2025)</li>
+      <li><a href="projects.html">HyperLearner</a>: AI-assisted learning platform for teachers and students (2025)</li>
+      <li><a href="projects.html">Hackiethon 2025</a>: React widget for the HackMelbourne Widget Challenge</li>
+      <li><a href="projects.html">NLP final project</a>: COMP90042 group project (2025)</li>
+    </ul>
+  </div>
+</details>
+
+<details>
+  <summary>Certifications and courses</summary>
+  <div class="body">
+    <ul>
+      <li><a href="https://www.deeplearning.ai/courses/agentic-ai">Agentic AI</a>, DeepLearning.AI (April 2026)</li>
+      <li><a href="https://www.deeplearning.ai/courses/retrieval-augmented-generation">Retrieval Augmented Generation (RAG)</a>, DeepLearning.AI (February 2026)</li>
+      <li><a href="https://www.deeplearning.ai/courses/evaluating-ai-agents">Evaluating AI Agents</a>, DeepLearning.AI with Arize AI (in progress)</li>
+    </ul>
+    <p><a href="learning.html">Everything I've studied</a></p>
+  </div>
+</details>
+
+<details>
+  <summary>Volunteering and leadership</summary>
+  <div class="body">
+    <p><span class="todo">[Optional: roles that show leadership or community work. Delete this section if you don't need it.]</span></p>
+  </div>
+</details>
+</div>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="inner">
+    <ul>
+      <li><span class="todo">[email]</span></li>
+      <li><span class="todo">[LinkedIn]</span></li>
+      <li><a href="https://github.com/tde-deentong">GitHub</a></li>
+    </ul>
+    <span>Plain HTML, hosted on GitHub Pages.</span>
+  </div>
+</footer>
+<script>
+(function () {
+  var all = document.querySelectorAll('.resume details');
+  var btn = document.querySelector('.toggle-all');
+  btn.addEventListener('click', function () {
+    var open = btn.dataset.open !== 'true';
+    all.forEach(function (d) { d.open = open; });
+    btn.dataset.open = open; btn.textContent = open ? 'Collapse all' : 'Expand all';
+  });
+  // Print every section, then restore what was open
+  var before = [];
+  window.addEventListener('beforeprint', function () { before = [].map.call(all, function (d) { return d.open; }); all.forEach(function (d) { d.open = true; }); });
+  window.addEventListener('afterprint', function () { all.forEach(function (d, i) { d.open = before[i]; }); });
+})();
+</script>
+</body>
+</html>

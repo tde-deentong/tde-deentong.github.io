@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning | DeenTong</title>
+  <meta name="description" content="Courses and books DeenTong is studying and has finished.">
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="site-header">
+  <div class="inner">
+    <a class="brand" href="index.html"><img src="logo.svg" alt="" width="36" height="36"><span>DeenTong</span></a>
+    <nav class="tabs" aria-label="Main">
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="learning.html" aria-current="page">Learning</a></li>
+        <li><a href="outside-work.html">Outside work</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main id="content">
+<div class="page">
+<h1>Learning</h1>
+<p class="intro">What I'm studying now, and the courses and books I've finished. My full notes and slide decks are on my <a href="https://tde-deentong.github.io/study-notes/">study notes site</a>.</p>
+
+<!-- To add an entry: copy a <li class="row"> block. Save the course image or book cover as a 640px-wide WebP in images/.
+     data-kind is "course" or "book". When something is finished, move it to the top of Completed. -->
+
+<h2 id="now">Learning now</h2>
+<ul class="rows" aria-labelledby="now">
+  <li class="row" data-kind="course">
+    <a class="tile" href="https://www.deeplearning.ai/courses/evaluating-ai-agents" aria-label="Evaluating AI Agents course page"><img src="images/evaluating-ai-agents.webp" alt="" width="640" height="360" loading="lazy"></a>
+    <div>
+      <h3><a href="https://www.deeplearning.ai/courses/evaluating-ai-agents">Evaluating AI Agents</a></h3>
+      <p class="by">DeepLearning.AI with Arize AI</p>
+      <p class="take">Observability, and structuring evaluation into experiments to improve both the output quality and the path an agent takes.</p>
+      <p class="meta"><span class="kind">Course</span><span>In progress</span><a href="https://tde-deentong.github.io/study-notes/evaluating-ai-agents/">My notes</a></p>
+    </div>
+  </li>
+</ul>
+
+<h2 id="done">Completed</h2>
+<div class="filters" role="group" aria-label="Filter completed learning">
+  <button type="button" data-f="all" aria-pressed="true">All</button>
+  <button type="button" data-f="course" aria-pressed="false">Courses</button>
+  <button type="button" data-f="book" aria-pressed="false">Books</button>
+</div>
+<ul class="rows" id="completed" aria-labelledby="done">
+  <li class="row" data-kind="course">
+    <a class="tile" href="https://www.deeplearning.ai/courses/agentic-ai" aria-label="Agentic AI course page"><img src="images/agentic-ai.webp" alt="" width="640" height="360" loading="lazy"></a>
+    <div>
+      <h3><a href="https://www.deeplearning.ai/courses/agentic-ai">Agentic AI</a></h3>
+      <p class="by">DeepLearning.AI, taught by Andrew Ng</p>
+      <p class="take">Agentic design patterns, and how to evaluate and optimize agentic systems.</p>
+      <p class="meta"><span class="kind">Course</span><span>Finished April 2026</span></p>
+    </div>
+  </li>
+  <li class="row" data-kind="course">
+    <a class="tile" href="https://www.deeplearning.ai/courses/retrieval-augmented-generation" aria-label="Retrieval Augmented Generation (RAG) course page"><img src="images/rag.webp" alt="" width="640" height="360" loading="lazy"></a>
+    <div>
+      <h3><a href="https://www.deeplearning.ai/courses/retrieval-augmented-generation">Retrieval Augmented Generation (RAG)</a></h3>
+      <p class="by">DeepLearning.AI, taught by Zain Hasan</p>
+      <p class="take">Search techniques and vector databases, plus prompt design, evaluation and deployment.</p>
+      <p class="meta"><span class="kind">Course</span><span>Finished February 2026</span></p>
+    </div>
+  </li>
+</ul>
+<p class="intro" id="empty" hidden>No books yet. They'll appear here as I finish them.</p>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="inner">
+    <ul>
+      <li><span class="todo">[email]</span></li>
+      <li><span class="todo">[LinkedIn]</span></li>
+      <li><a href="https://github.com/tde-deentong">GitHub</a></li>
+    </ul>
+    <span>Plain HTML, hosted on GitHub Pages.</span>
+  </div>
+</footer>
+<script>
+(function () {
+  var btns = document.querySelectorAll('.filters button');
+  var rows = document.querySelectorAll('#completed .row');
+  var empty = document.getElementById('empty');
+  btns.forEach(function (b) {
+    b.addEventListener('click', function () {
+      btns.forEach(function (x) { x.setAttribute('aria-pressed', x === b); });
+      var shown = 0;
+      rows.forEach(function (r) { var on = b.dataset.f === 'all' || r.dataset.kind === b.dataset.f; r.hidden = !on; if (on) shown++; });
+      empty.hidden = shown > 0;
+    });
+  });
+})();
+</script>
+</body>
+</html>

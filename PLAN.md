@@ -93,7 +93,7 @@ There's no Contact tab. Contact details go on the About page and in every page's
 - [ ] Project screenshots; demo links for Toothian and Heidi for Patients; HeidiBuild month and outcome
 - [ ] Running races, Runcation trips and photos; a Pilates blurb
 - [ ] Check whether Deloitte allows the client work details to be public (the 185K-record risk pipeline)
-- [ ] Decide whether to keep the old `deentong` repo page or redirect it here
+- [x] Old `deentong` page now redirects here (22 October 2026)
 - [x] Push access from Claude sessions (working since 22 October 2026)
 
 ## Later ideas

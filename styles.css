@@ -165,3 +165,13 @@ p { margin: 0 0 14px; max-width: 40em; }
   .todo { background: none; }
   a { text-decoration: none; }
 }
+
+/* Content pass 2: highlights, resume sub-roles, skills headings */
+.highlights { margin: 8px 0 0; padding-left: 1.2rem; max-width: 44em; display: grid; gap: 8px; }
+.highlights a { font-size: 15px; white-space: nowrap; }
+h4 { font-family: var(--sans); font-weight: 600; font-size: 1rem; margin: 10px 0 0; }
+.entry h3 { font-size: 1.2rem; }
+.sub { margin: 16px 0 0; padding-left: 14px; border-left: 2px solid var(--line); }
+.sub h4 { margin: 0; }
+.sub .when { margin: 0 0 4px; }
+.skill h2 { margin: 0; font-size: 1.3rem; }

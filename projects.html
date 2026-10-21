@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Projects | DeenTong</title>
-  <meta name="description" content="Projects by DeenTong, with the problem, role and result for each.">
+  <meta name="description" content="Research, coursework and hackathon projects by DeenTong, with the problem and result for each.">
   <link rel="icon" type="image/svg+xml" href="logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,65 +31,74 @@
 <main id="content">
 <div class="page">
 <h1>Projects</h1>
-<p class="intro">Things I've built, with the problem each one solves and what came of it.</p>
+<p class="intro">Research, coursework and hackathon projects, with the problem each one tackled and what came of it. My day-to-day work is on the <a href="resume.html">Resume</a> tab.</p>
 
 <!-- To add a project: copy a <li class="row"> block. Put a 640px-wide screenshot in images/ and swap the blank tile for
      <a class="tile" href="..."><img src="images/NAME.webp" alt="" width="640" height="360" loading="lazy"></a> -->
 <ul class="rows projects">
-  <li class="row">
-    <a class="tile blank" href="https://github.com/tde-deentong/Heidi25Hack" aria-label="Heidi25Hack on GitHub"><span class="todo">[screenshot]</span></a>
+  <li class="row" id="research">
+    <div class="tile blank"><span class="todo">[screenshot]</span></div>
     <div>
-      <h3><a href="https://github.com/tde-deentong/Heidi25Hack">Heidi25Hack</a></h3>
-      <p class="by">Hackathon project, 2025</p>
+      <h3>Generative augmentation to reduce spurious correlations</h3>
+      <p class="by">Research project, University of Melbourne, July to November 2025</p>
       <dl class="detail">
-        <dt>Problem</dt><dd>Patient pre-screening forms are slow to fill in, and they miss context a patient would mention out loud.</dd>
-        <dt>My role</dt><dd><span class="todo">[what you personally did]</span></dd>
-        <dt>What I built</dt><dd>A voice-driven pre-screening assistant. A language model picks the right form (dentistry or cardiac), asks follow-up questions based on what the patient says, and reads questions back with text-to-speech.</dd>
-        <dt>Result</dt><dd><span class="todo">[outcome, ideally with a number or placing]</span></dd>
+        <dt>Problem</dt><dd>Image classifiers often learn the background instead of the object, so they fail on the groups where the two don't usually appear together.</dd>
+        <dt>What I did</dt><dd>Built a generative augmentation pipeline with SAM2, GroundingDINO and Stable Diffusion that isolates the causal features of each image and reduces background bias. Ran the experiments on HPC clusters with Slurm.</dd>
+        <dt>Result</dt><dd>Worst-group accuracy rose from 58.9% to 72.8% on ResNet-152, and from 66.67% to 73.33% on ViT-B/32.</dd>
       </dl>
-      <p class="meta"><span class="kind">React, FastAPI, GPT-4o-mini, Whisper, MongoDB, Docker</span><a href="https://github.com/tde-deentong/Heidi25Hack">Code on GitHub</a></p>
+      <p class="meta"><span class="kind">Deep learning, vision-language models, CNNs, transformers</span></p>
     </div>
   </li>
-  <li class="row">
-    <a class="tile blank" href="https://github.com/tde-deentong/hack-learner" aria-label="HyperLearner on GitHub"><span class="todo">[screenshot]</span></a>
+  <li class="row" id="toothian">
+    <a class="tile blank" href="#toothian" aria-label="Toothian"><span class="todo">[screenshot]</span></a>
     <div>
-      <h3><a href="https://github.com/tde-deentong/hack-learner">HyperLearner</a></h3>
-      <p class="by">Hackathon project, 2025</p>
+      <h3><a href="#toothian">Toothian</a></h3>
+      <p class="by">MedHack 2025, 1st place out of 60+ teams, February 2025</p>
       <dl class="detail">
-        <dt>Problem</dt><dd>Teachers need a quicker way to create learning materials and follow each student's progress.</dd>
-        <dt>My role</dt><dd><span class="todo">[what you personally did]</span></dd>
-        <dt>What I built</dt><dd>A learning platform that connects teachers and students, with AI-generated learning materials, progress tracking and personalised assignments.</dd>
-        <dt>Result</dt><dd><span class="todo">[outcome, ideally with a number or placing]</span></dd>
+        <dt>Problem</dt><dd>Dental problems are often found late. Toothian is a preventive check-up people can do from their phone.</dd>
+        <dt>What I did</dt><dd>Built the web app in Next.js, TypeScript and React. Trained a YOLOv12 object detection model to spot cavities, stains and gum disease. Integrated the Gemini API, used Supabase for storage, and deployed on Vercel.</dd>
+        <dt>Result</dt><dd>1st place out of 60+ teams.</dd>
       </dl>
-      <p class="meta"><span class="kind">Next.js, TypeScript, Prisma, Supabase Postgres, NextAuth</span><a href="https://github.com/tde-deentong/hack-learner">Code on GitHub</a></p>
+      <p class="meta"><span class="kind">Next.js, TypeScript, YOLOv12, Gemini API, Supabase, Vercel</span><a href="#toothian">Demo <span class="todo">[link]</span></a></p>
     </div>
   </li>
-  <li class="row">
-    <a class="tile blank" href="https://github.com/tde-deentong/NLP_FinalProject" aria-label="NLP final project (COMP90042) on GitHub"><span class="todo">[screenshot]</span></a>
+  <li class="row" id="fact-check">
+    <a class="tile blank" href="https://github.com/tde-deentong/NLP_FinalProject" aria-label="Climate science fact-checking pipeline"><span class="todo">[screenshot]</span></a>
     <div>
-      <h3><a href="https://github.com/tde-deentong/NLP_FinalProject">NLP final project (COMP90042)</a></h3>
-      <p class="by">University group project, 2025</p>
+      <h3><a href="https://github.com/tde-deentong/NLP_FinalProject">Climate science fact-checking pipeline</a></h3>
+      <p class="by">NLP group project (COMP90042), University of Melbourne, April to May 2025</p>
       <dl class="detail">
-        <dt>Problem</dt><dd><span class="todo">[the task your team tackled]</span></dd>
-        <dt>My role</dt><dd><span class="todo">[what you personally did]</span></dd>
-        <dt>What I built</dt><dd><span class="todo">[the system you designed, and why you chose that architecture]</span></dd>
-        <dt>Result</dt><dd><span class="todo">[outcome, ideally with a number or placing]</span></dd>
+        <dt>Problem</dt><dd>Checking a climate claim means finding the right evidence among thousands of passages, then deciding whether it supports or refutes the claim.</dd>
+        <dt>What I did</dt><dd>Designed a hybrid retrieval system combining TF-IDF, MiniLM embeddings and cross-encoder reranking. Fine-tuned RoBERTa for stance classification and fixed its habit of overpredicting the majority class.</dd>
+        <dt>Result</dt><dd>Retrieval F1 improved by 0.142 over the baseline, and stance macro F1 rose from 0.40 to 0.57.</dd>
       </dl>
-      <p class="meta"><span class="kind">Python, Jupyter</span><a href="https://github.com/tde-deentong/NLP_FinalProject">Code on GitHub</a></p>
+      <p class="meta"><span class="kind">NLP, transformers, information retrieval</span><a href="https://github.com/tde-deentong/NLP_FinalProject">Code on GitHub</a></p>
     </div>
   </li>
-  <li class="row">
-    <a class="tile blank" href="https://github.com/tde-deentong/Hackiethon25" aria-label="Hackiethon 2025 widget on GitHub"><span class="todo">[screenshot]</span></a>
+  <li class="row" id="heidi">
+    <a class="tile blank" href="https://github.com/tde-deentong/Heidi25Hack" aria-label="Heidi for Patients"><span class="todo">[screenshot]</span></a>
     <div>
-      <h3><a href="https://github.com/tde-deentong/Hackiethon25">Hackiethon 2025 widget</a></h3>
-      <p class="by">HackMelbourne Widget Challenge, 2025</p>
+      <h3><a href="https://github.com/tde-deentong/Heidi25Hack">Heidi for Patients</a></h3>
+      <p class="by">HeidiBuild 2025, Google and Heidi, <span class="todo">[month 2025]</span></p>
       <dl class="detail">
-        <dt>Problem</dt><dd><span class="todo">[the everyday problem your widget solves]</span></dd>
-        <dt>My role</dt><dd><span class="todo">[what you personally did]</span></dd>
-        <dt>What I built</dt><dd>A self-contained, reusable React widget for the HackMelbourne showcase site. <span class="todo">[what it does]</span></dd>
-        <dt>Result</dt><dd><span class="todo">[outcome, ideally with a number or placing]</span></dd>
+        <dt>Problem</dt><dd>Clinics rely on manual pre-consultation forms, which are slow for patients and miss context they'd mention out loud.</dd>
+        <dt>What I did</dt><dd>Built a full-stack web app that replaces intake forms with an AI voice assistant. Intent classification works out the purpose of the visit and routes the patient to the right screening flow. Speech-to-text with OpenAI Whisper and GPT-based question routing surface the clinician's own form templates.</dd>
+        <dt>Result</dt><dd><span class="todo">[outcome, e.g. placing or judges' feedback]</span></dd>
       </dl>
-      <p class="meta"><span class="kind">React, Vite</span><a href="https://github.com/tde-deentong/Hackiethon25">Code on GitHub</a></p>
+      <p class="meta"><span class="kind">React, FastAPI, Whisper, GPT-4o-mini, MongoDB, Docker</span><a href="https://github.com/tde-deentong/Heidi25Hack">Code on GitHub</a><a href="#heidi">Demo <span class="todo">[link]</span></a></p>
+    </div>
+  </li>
+  <li class="row" id="shapestack">
+    <div class="tile blank"><span class="todo">[screenshot]</span></div>
+    <div>
+      <h3>Stability prediction for autonomous agents</h3>
+      <p class="by">Computer vision project, October to November 2024</p>
+      <dl class="detail">
+        <dt>Problem</dt><dd>A robot stacking objects needs to predict whether a structure will stay standing before it lets go.</dd>
+        <dt>What I did</dt><dd>Trained ResNet and InceptionV3 models on 7,680 images from the ShapeStack dataset. Experimented systematically with architecture choices such as batch normalisation, learning rates, class weighting and data augmentation.</dd>
+        <dt>Result</dt><dd>InceptionV3 F1 rose from 0.27 to 0.56 with augmentation, beating the transfer-learning model.</dd>
+      </dl>
+      <p class="meta"><span class="kind">Computer vision, deep learning</span></p>
     </div>
   </li>
 </ul>

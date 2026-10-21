@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Resume | DeenTong</title>
-  <meta name="description" content="DeenTong's resume: experience, education, projects and courses.">
+  <meta name="description" content="DeenTong's resume: Deloitte, Capgemini, NTRO, University of Melbourne research, education and certificates.">
   <link rel="icon" type="image/svg+xml" href="logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,26 +38,78 @@
 <details open>
   <summary>Summary</summary>
   <div class="body">
-    <p><span class="todo">[Two or three lines: who you are, what you're good at, and the roles you're after.]</span></p>
+    <p>AI Engineer at Deloitte building enterprise agentic AI systems. I've shipped production LLM pipelines on Databricks, trained computer vision models for road assets, and raised worst-group accuracy in generative augmentation research. Master of Information Technology (Artificial Intelligence) from the University of Melbourne, with an undergraduate degree in psychology.</p>
   </div>
 </details>
 
 <details open>
   <summary>Experience</summary>
   <div class="body">
-    <div class="entry">
-      <h3><span class="todo">[Job title, Organisation]</span></h3>
-      <p class="when"><span class="todo">[Month year to month year]</span></p>
+    <div class="entry" id="deloitte">
+      <h3>Engineering Data &amp; AI Analyst, Deloitte</h3>
+      <p class="when">March 2026 to present, Melbourne</p>
+
+      <div class="sub">
+        <h4>AI Engineer</h4>
+        <p class="when">October 2026 to present</p>
+        <ul>
+        <li>Building enterprise agentic AI systems with Microsoft Foundry.</li>
+      </ul>
+      </div>
+
+      <div class="sub">
+        <h4>Machine Learning Engineer</h4>
+        <p class="when">June 2026 to October 2026</p>
+        <ul>
+        <li>Uplifted a production pipeline on Databricks (Python, PySpark, Apache Spark, Delta Lake) that turns 185K+ raw records into structured risk data through multilingual processing, vector embeddings, topic clustering, and LLM summarisation and field generation, with Unity Catalog for data governance.</li>
+        <li>Designed prompt engineering frameworks with structured output schemas and few-shot prompting, making risk classification, summarisation and field extraction more consistent and mitigating a ~5% misattribution issue.</li>
+        <li>Automated a multi-day grouping system that links related events across days into persistent, trackable groups, giving analysts a longitudinal view of evolving supply chain threats instead of isolated daily snapshots. Reduced manual work by ~80% and eliminated human error.</li>
+        <li>Found and fixed critical data ingestion defects in the upstream pipeline, including truncated and empty fields that were degrading downstream clustering and LLM generation.</li>
+        <li>Evaluated vector embedding types and multilingual embedding models, including the e5 family, bringing 66% more data into scope and improving downstream clustering by ~10%.</li>
+        <li>Benchmarked GPT-4o, GPT-5 and Claude Sonnet 4.6 to balance cost and performance.</li>
+      </ul>
+      </div>
+
+      <div class="sub">
+        <h4>GenAI Engineering Program, internal learning and knowledge sharing</h4>
+        <p class="when">June 2026 to August 2026</p>
+        <ul>
+        <li>Bootcamp covering retrieval-augmented generation (RAG), Model Context Protocol (MCP), skills, agent memory, agent harnesses and agent evaluation.</li>
+        <li>Researched memory architectures: short-term (checkpointing) and long-term (episodic, semantic and procedural).</li>
+        <li>Delivered a technical knowledge-sharing session with a code implementation and demo applying these concepts to a use case.</li>
+      </ul>
+      </div>
+    </div>
+
+    <div class="entry" id="capgemini">
+      <h3>Associate Consultant, Capgemini</h3>
+      <p class="when">March 2025 to March 2026, Melbourne</p>
+      <h4>Functional analyst, Energy Services</h4>
       <ul>
-        <li><span class="todo">[Achievement, with a number where you can]</span></li>
-        <li><span class="todo">[Achievement, with a number where you can]</span></li>
+        <li>Contributed to requirements gathering and documentation, producing functional specifications and client-facing presentations.</li>
+        <li>Wrote and managed user stories in Azure DevOps, improving sprint efficiency and requirement traceability.</li>
       </ul>
     </div>
-    <div class="entry">
-      <h3><span class="todo">[Job title, Organisation]</span></h3>
-      <p class="when"><span class="todo">[Month year to month year]</span></p>
+
+    <div class="entry" id="research">
+      <h3>Research Project, University of Melbourne</h3>
+      <p class="when">July 2025 to November 2025, Melbourne</p>
+      <h4>Generative augmentation to reduce spurious correlations in vision classifiers</h4>
       <ul>
-        <li><span class="todo">[Achievement, with a number where you can]</span></li>
+        <li>Built a generative augmentation pipeline with SAM2, GroundingDINO and Stable Diffusion to remove spurious correlations in image classifiers.</li>
+        <li>Improved worst-group accuracy from 58.9% to 72.8% (ResNet-152) and from 66.67% to 73.33% (ViT-B/32) by isolating causal features and reducing background bias.</li>
+        <li>Used HPC clusters and the Slurm workload manager for faster experimentation and iteration.</li>
+      </ul>
+    </div>
+
+    <div class="entry" id="ntro">
+      <h3>Machine Learning Engineer, National Transport Research Organisation (NTRO)</h3>
+      <p class="when">July 2024 to November 2024, Melbourne</p>
+      <h4>Instance segmentation under varying lighting conditions</h4>
+      <ul>
+        <li>Trained and optimised YOLOv8 and YOLOv11 models for instance segmentation of road assets, reaching 92% mAP on transport imaging datasets.</li>
+        <li>Automated annotation by training a baseline segmenter on a small labelled set to pre-label new images for review in Roboflow, cutting manual labelling by ~30% across 1,000+ images.</li>
+        <li>Made the models more robust to time of day, shadows and exposure with brightness, contrast and saturation augmentations, raising mAP by 4%.</li>
       </ul>
     </div>
   </div>
@@ -67,11 +119,17 @@
   <summary>Education</summary>
   <div class="body">
     <div class="entry">
-      <h3><span class="todo">[Degree, University]</span></h3>
-      <p class="when"><span class="todo">[Start year to end year]</span></p>
+      <h3>Master of Information Technology (Artificial Intelligence), University of Melbourne</h3>
+      <p class="when">July 2023 to November 2025</p>
       <ul>
-        <li>Relevant subjects include Natural Language Processing (COMP90042). <span class="todo">[Other subjects, thesis or awards]</span></li>
+        <li>Coursework: machine learning, deep learning, computer vision, natural language processing, text analytics, ethics of AI, software development.</li>
+        <li>Societies: Computing and Information Systems Students Association (CISSA), Women in Tech (WIT).</li>
+        <li>Hackathons: MedHack 2025 (1st place), HeidiBuild 2025, Hack Melbourne 2025, FEIT Hackathon Festival 2023 and 2025.</li>
       </ul>
+    </div>
+    <div class="entry">
+      <h3>Bachelor of Arts (Psychology), University of Melbourne</h3>
+      <p class="when">March 2018 to December 2021</p>
     </div>
   </div>
 </details>
@@ -80,30 +138,29 @@
   <summary>Projects and hackathons</summary>
   <div class="body">
     <ul>
-      <li><a href="projects.html">Heidi25Hack</a>: voice-driven patient pre-screening assistant (2025)</li>
-      <li><a href="projects.html">HyperLearner</a>: AI-assisted learning platform for teachers and students (2025)</li>
-      <li><a href="projects.html">Hackiethon 2025</a>: React widget for the HackMelbourne Widget Challenge</li>
-      <li><a href="projects.html">NLP final project</a>: COMP90042 group project (2025)</li>
+      <li><a href="projects.html#toothian">Toothian</a>: MedHack 2025, 1st place out of 60+ teams</li>
+      <li><a href="projects.html#heidi">Heidi for Patients</a>: HeidiBuild 2025, Google and Heidi</li>
+      <li><a href="projects.html#fact-check">Climate science fact-checking pipeline</a>: retrieval and NLI (2025)</li>
+      <li><a href="projects.html#shapestack">Stability prediction for autonomous agents</a>: ShapeStack dataset (2024)</li>
     </ul>
   </div>
 </details>
 
 <details>
-  <summary>Certifications and courses</summary>
+  <summary>Certificates</summary>
   <div class="body">
     <ul>
       <li><a href="https://www.deeplearning.ai/courses/agentic-ai">Agentic AI</a>, DeepLearning.AI (April 2026)</li>
       <li><a href="https://www.deeplearning.ai/courses/retrieval-augmented-generation">Retrieval Augmented Generation (RAG)</a>, DeepLearning.AI (February 2026)</li>
-      <li><a href="https://www.deeplearning.ai/courses/evaluating-ai-agents">Evaluating AI Agents</a>, DeepLearning.AI with Arize AI (in progress)</li>
     </ul>
     <p><a href="learning.html">Everything I've studied</a></p>
   </div>
 </details>
 
 <details>
-  <summary>Volunteering and leadership</summary>
+  <summary>Skills</summary>
   <div class="body">
-    <p><span class="todo">[Optional: roles that show leadership or community work. Delete this section if you don't need it.]</span></p>
+    <p>Machine learning and computer vision, GenAI (RAG, prompt engineering, agentic AI), PyTorch, TensorFlow, Keras, scikit-learn, Python, TypeScript, SQL. <a href="skills.html">Skills, with proof for each</a></p>
   </div>
 </details>
 </div>

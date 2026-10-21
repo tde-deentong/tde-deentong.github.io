@@ -3,7 +3,7 @@
 The working plan for this site. Update it whenever the structure or rules change, so later iterations start from here.
 
 - **Live at:** https://tde-deentong.github.io/
-- **Goal:** a job-hunting site. A recruiter should understand what I do, see proof, and know how to reach me within about a minute.
+- **Goal:** a job-hunting site for an AI Engineer. A recruiter should understand what I do, see proof, and know how to reach me within about a minute.
 - **Built with:** plain HTML and one shared stylesheet (`styles.css`). There's no build step, and GitHub Pages serves the files as they are.
 
 ## Tabs
@@ -35,29 +35,31 @@ There's no Contact tab. Contact details go on the About page and in every page's
 - Contact: email, LinkedIn, GitHub.
 
 ### Projects (`projects.html`)
-- Each row lists the problem, my role, what I built, the result (with numbers where possible), the stack and a link.
-- Current candidates, taken from my GitHub:
-  - **Heidi25Hack:** voice-driven patient pre-screening (React, FastAPI, GPT-4o-mini, Whisper, MongoDB, Docker).
-  - **HyperLearner** (`hack-learner`): an AI learning platform for teachers and students (Next.js, Prisma, Supabase, NextAuth).
-  - **NLP_FinalProject:** COMP90042 group project, 2025.
-  - **Hackiethon25:** a React widget for the HackMelbourne Widget Challenge.
-  - Possible extras: `genai-inte`, `Building-AI-Assistants-with-On-Device-Memory`, `Spatio-Temporal-Data`. The last two are currently empty.
-- Each project needs: my role, the result, and a demo or screenshot if I have one.
+- Research, coursework and hackathon projects. Paid work stays on the Resume tab, and Projects links there.
+- Each row lists the problem, what I did and the result (with numbers), then the stack and links. Each row has an `id` so other pages can link straight to it.
+- Current projects:
+  - **Generative augmentation research** (`#research`): University of Melbourne, 2025. Worst-group accuracy rose from 58.9% to 72.8%.
+  - **Toothian** (`#toothian`): MedHack 2025, 1st place out of 60+ teams. Private repo, so it links to a demo only.
+  - **Climate science fact-checking** (`#fact-check`): COMP90042, 2025. Repo `NLP_FinalProject`.
+  - **Heidi for Patients** (`#heidi`): HeidiBuild 2025. Repo `Heidi25Hack`.
+  - **ShapeStack stability prediction** (`#shapestack`): 2024.
+- Left off for now: HyperLearner (`hack-learner`) and the Hackiethon 2025 widget, since neither is on the resume. Add them back if they get a result worth showing.
+- Still needed: a screenshot for each project, demo links for Toothian and Heidi, the month of HeidiBuild, and Heidi's outcome.
 
 ### Resume (`resume.html`)
-- Sections: Summary, Experience, Education, Projects and hackathons (links to Projects), Certifications and courses (links to Learning), and Volunteering and leadership (optional).
+- Sections: Summary, Experience, Education, Projects and hackathons (links to Projects), Certificates (links to Learning), and a one-line Skills summary (links to Skills).
+- Experience is newest first, by end date. Deloitte shows its three roles as indented sub-entries. Each employer has an `id` (`#deloitte`, `#capgemini`, `#research`, `#ntro`) that Skills and About link to.
+- The source of truth is my resume document. When it changes, update this page to match.
 - Sections expand when their heading is clicked, so the page stays short on phones.
 - A print stylesheet hides the navigation, so printing or saving as PDF from the browser gives a clean resume.
-- Skills stay on the Skills tab and aren't repeated here.
+- The full skills list stays on the Skills tab. Resume only has a one-line summary.
 - Keep a separate PDF on my computer for job applications that need an upload.
 
 ### Skills (`skills.html`)
-- Groups are named by the problem they solve, not by tool:
-  - *Make agents capable:* agentic design patterns, tool use, RAG, vector databases
-  - *Make agents reliable:* evals, tracing, observability, experiments
-  - *Work with language and data:* NLP, data analysis
-  - *Ship full-stack apps:* React, Next.js, FastAPI, databases, Docker
-- Each group lists its tools in one line and links to proof (a project, course or notes).
+- Groups are named by the problem they solve, not by tool: Build agentic AI systems, Ground language models in data, Make LLM output reliable, Process data at scale, Teach machines to see, Train and run models, Ship apps, and Turn needs into requirements.
+- Each group lists its tools in one line, then "Where I've used it" links to a resume entry, project or course.
+- A closing "Tools I build with" line lists AI coding tools and when I started using each.
+- Add a skill only if a link to where it was used can go with it.
 
 ### Learning (`learning.html`)
 - **Learning now:** in-progress courses.
@@ -83,13 +85,16 @@ There's no Contact tab. Contact details go on the About page and in every page's
 
 ## Open items
 
-- [ ] Headline, bio and target roles (About)
+- [x] Headline, bio and highlights (About)
+- [x] Resume content from my resume document
+- [x] Projects and Skills rewritten from the resume
+- [ ] Target roles and location preference (About)
 - [ ] Email (a dedicated address) and LinkedIn URL (About and footer)
-- [ ] My role and the result for each project, plus screenshots
-- [ ] Resume content: experience, education and any certifications
+- [ ] Project screenshots; demo links for Toothian and Heidi for Patients; HeidiBuild month and outcome
 - [ ] Running races, Runcation trips and photos; a Pilates blurb
+- [ ] Check whether Deloitte allows the client work details to be public (the 185K-record risk pipeline)
 - [ ] Decide whether to keep the old `deentong` repo page or redirect it here
-- [ ] Reconnect GitHub so changes can be pushed from Claude
+- [ ] Push access from Claude sessions (GitHub access was granted, but the session that built this couldn't push)
 
 ## Later ideas
 

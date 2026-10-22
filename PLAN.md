@@ -77,11 +77,16 @@ There's no Contact tab. Contact details go on the About page and in every page's
 | Retrieval Augmented Generation (RAG) | DeepLearning.AI | Zain Hasan | Finished February 2026 | Search techniques and vector databases, plus prompt design, evaluation and deployment |
 
 ### Outside work (`outside-work.html`)
-- One page with three sections, linked from a small in-page menu:
-  - **Running (and Runcations):** races and distances, plus trips planned around races, with a photo each
-  - **Pilates:** why I do it and what it's taught me
-  - **Reading (starting soon...):** a placeholder until the list starts
-- Any section can become its own page if it grows.
+- This is the one playful page on the site, by design. The other tabs stay calm and professional.
+- **Meadow:** `meadow.js` draws a grass field on a fixed `<canvas id="meadow">` behind the page. Three layers of blades sway in the wind, part around the cursor (or a finger on touch screens), and spring back. Pollen drifts by day; in dark mode it becomes a night meadow with fireflies.
+- **Look:** `meadow.css` (loaded only on this page) sets the pastel sky, frosted cards that alternate left and right, and Fraunces italic headings. The intro reads "Where I go when the laptop closes."
+- **Care points:** animation pauses in hidden tabs; "reduce motion" gets a still field; fewer blades on small screens. Keep it at 60fps if you add anything.
+- Sections: **Running (and Runcations)**, **Pilates**, **Reading (starting soon...)**. Add photos to the running row as 640px-wide WebP in `images/`.
+
+## Design system
+
+- **Spacing:** use only the scale in `styles.css` (`--s1` 4px to `--s9` 96px). Headings sit close to their own content and far from the section above.
+- **Colour and type:** the tokens at the top of `styles.css`. The meadow page overrides them in `meadow.css`.
 
 ## Open items
 

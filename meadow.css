@@ -1,0 +1,96 @@
+/* Outside work: a dreamy meadow. Loaded only by outside-work.html, after styles.css. */
+
+body.meadow {
+  --fg: #2d2643; --muted: #5f5675; --accent: #c2577d; --link: #6a4fa3;
+  --line: rgba(255, 255, 255, 0.6);
+  --card-bg: rgba(255, 252, 250, 0.58); --card-edge: rgba(255, 255, 255, 0.75);
+  --card-shadow: 0 24px 60px -28px rgba(96, 62, 128, 0.45);
+  --pill-bg: rgba(255, 255, 255, 0.5);
+  --dream: 'Fraunces', 'Source Serif 4', Georgia, serif;
+  --sky:
+    radial-gradient(60vmax 40vmax at 78% 64%, rgba(255, 236, 196, 0.85), rgba(255, 236, 196, 0) 70%),
+    linear-gradient(180deg, #c9bfe6 0%, #e4cde2 30%, #f6d6c8 58%, #fbe6c9 80%, #f3efd8 100%);
+  min-height: 100vh;
+  background: #e4cde2;
+}
+@media (prefers-color-scheme: dark) {
+  body.meadow {
+    --fg: #f0ecff; --muted: #bdb6dc; --accent: #f3a9c6; --link: #cdb9ff;
+    --line: rgba(255, 255, 255, 0.16);
+    --card-bg: rgba(26, 24, 60, 0.55); --card-edge: rgba(255, 255, 255, 0.14);
+    --card-shadow: 0 24px 60px -24px rgba(0, 0, 0, 0.6);
+    --pill-bg: rgba(255, 255, 255, 0.1);
+    --sky:
+      radial-gradient(40vmax 30vmax at 80% 22%, rgba(214, 220, 255, 0.28), rgba(214, 220, 255, 0) 70%),
+      linear-gradient(180deg, #11163a 0%, #1f2456 40%, #34306a 75%, #3f3570 100%);
+    background: #1f2456;
+  }
+}
+
+#meadow { position: fixed; inset: 0; z-index: 0; pointer-events: none; background: var(--sky); }
+body.meadow .site-header, body.meadow main, body.meadow .site-footer { position: relative; z-index: 1; }
+
+body.meadow .site-header {
+  background: rgba(255, 255, 255, 0.16);
+  -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  border-bottom-color: var(--line);
+}
+
+/* Opening view: the title floats in the sky, the field sits below */
+.meadow-hero {
+  min-height: calc(100vh - 90px);
+  display: flex; flex-direction: column; justify-content: flex-start;
+  padding-top: clamp(var(--s6), 12vh, var(--s9));
+}
+body.meadow h1 {
+  font-family: var(--dream); font-style: italic; font-weight: 400;
+  font-variation-settings: 'SOFT' 100, 'opsz' 144;
+  font-size: clamp(3.2rem, 11vw, 6.5rem); line-height: 0.95; letter-spacing: -0.01em;
+  margin: 0 0 var(--s4);
+}
+body.meadow .lede { font-family: var(--dream); font-style: italic; font-size: clamp(1.25rem, 3vw, 1.6rem); color: var(--muted); }
+
+body.meadow .jump { gap: var(--s3); margin-top: var(--s5); }
+body.meadow .jump a {
+  display: inline-block; padding: var(--s2) var(--s4); border-radius: 999px;
+  background: var(--pill-bg); border: 1px solid var(--card-edge); color: var(--fg); text-decoration: none;
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+}
+body.meadow .jump a:hover { background: var(--card-bg); color: var(--accent); }
+
+.hint { margin-top: var(--s6); font-family: var(--dream); font-style: italic; color: var(--muted); font-size: 1rem; }
+.hint .touch { display: none; }
+@media (hover: none) { .hint .mouse { display: none; } .hint .touch { display: inline; } }
+
+/* Floating cards */
+body.meadow .life {
+  max-width: 600px; margin: 0 0 var(--s8); padding: var(--s6);
+  background: var(--card-bg); border: 1px solid var(--card-edge); border-radius: 28px;
+  box-shadow: var(--card-shadow);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2); backdrop-filter: blur(16px) saturate(1.2);
+}
+body.meadow .life + .life { border-top: 1px solid var(--card-edge); margin-top: 0; }
+body.meadow .life:nth-of-type(even) { margin-left: auto; }
+body.meadow .life h2 {
+  font-family: var(--dream); font-weight: 500; font-variation-settings: 'SOFT' 100, 'opsz' 72;
+  font-size: 2rem; margin: 0 0 var(--s3);
+}
+body.meadow .life p:last-child { margin-bottom: 0; }
+body.meadow .life .rows { margin-top: var(--s4); }
+body.meadow .life .row { border: 0; padding: var(--s3) 0 0; }
+body.meadow .tile { background: var(--pill-bg); border-color: var(--card-edge); border-radius: 16px; }
+body.meadow .soon { font-family: var(--dream); font-size: 1.15rem; }
+
+/* Room at the end so the field shows again below the last card */
+.meadow-end { height: 34vh; }
+
+body.meadow .site-footer {
+  background: var(--card-bg); border-top-color: var(--card-edge);
+  -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+}
+
+@media (max-width: 640px) {
+  .meadow-hero { min-height: calc(100vh - 130px); }
+  body.meadow .life { padding: var(--s5); border-radius: 22px; margin-bottom: var(--s7); }
+  body.meadow .life h2 { font-size: 1.6rem; }
+}

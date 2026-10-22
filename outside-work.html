@@ -4,14 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Outside work | DeenTong</title>
-  <meta name="description" content="Running, runcations, Pilates and reading.">
+  <meta name="description" content="Running, runcations, Pilates and reading, in a meadow you can run your cursor through.">
   <link rel="icon" type="image/svg+xml" href="logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400..700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..600,100;1,9..144,300..600,100&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="meadow.css">
 </head>
-<body>
+<body class="meadow">
+<canvas id="meadow" aria-hidden="true"></canvas>
 <a class="skip" href="#content">Skip to content</a>
 <header class="site-header">
   <div class="inner">
@@ -30,13 +33,16 @@
 </header>
 <main id="content">
 <div class="page">
-<h1>Outside work</h1>
-<p class="intro">What keeps me busy away from the keyboard.</p>
-<ul class="jump">
-  <li><a href="#running">Running (and Runcations)</a></li>
-  <li><a href="#pilates">Pilates</a></li>
-  <li><a href="#reading">Reading</a></li>
-</ul>
+<div class="meadow-hero">
+  <h1>Outside work</h1>
+  <p class="lede">Where I go when the laptop closes.</p>
+  <ul class="jump">
+    <li><a href="#running">Running (and Runcations)</a></li>
+    <li><a href="#pilates">Pilates</a></li>
+    <li><a href="#reading">Reading</a></li>
+  </ul>
+  <p class="hint" aria-hidden="true"><span class="mouse">Run your cursor through the grass.</span><span class="touch">Drag your finger through the grass.</span></p>
+</div>
 
 <section class="life" id="running" aria-labelledby="running-h">
   <h2 id="running-h">Running (and Runcations)</h2>
@@ -63,6 +69,8 @@
   <h2 id="reading-h">Reading</h2>
   <p class="soon">Starting soon. Recommendations welcome.</p>
 </section>
+
+<div class="meadow-end" aria-hidden="true"></div>
 </div>
 </main>
 <footer class="site-footer">
@@ -75,5 +83,6 @@
     <span>Plain HTML, hosted on GitHub Pages.</span>
   </div>
 </footer>
+<script src="meadow.js" defer></script>
 </body>
 </html>
